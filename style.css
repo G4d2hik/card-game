@@ -1,0 +1,61 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*::before,*::after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active {outline:none;}
+a:focus,a:active {outline: none;}
+nav,footer,header,aside {display: block;}
+html,body {height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+input,button,textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a,a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1,h2,h3,h4,h5,h6 {font-size: inherit;font-weight: 400;}
+/*!------Обнуляющие стили--------*/
+/*?------Обнуляющие стили--------*/
+/*TODO---Обнулябщие стили--------*/
+body{
+    height: 100vh;
+    display: flex;
+    background-color: rgb(23, 6, 99);
+}
+.memory-game{
+    flex-wrap: wrap;
+    display: flex;
+    width: 640px;
+    height:  640px;
+    perspective: 1000px;
+    margin: auto;
+}
+.memory-card{
+    position: relative;
+    width: calc(25% - 10px);
+    height: calc(33.3333% - 10px);
+    margin: 5px;
+    transition: all 0.3s;
+    transform-style: preserve-3d;
+    
+}
+.memory-card:active{
+    
+    transform: scale(0.95);
+}
+.memory-card.flip{
+transform: rotateY(180deg);
+}
+.front-face,
+.back-face{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: rgb(255, 107, 21);
+    backface-visibility: hidden;
+}
+.front-face{
+    transform: rotateY(180deg);
+    background-color:rgba(83, 211, 71, 0.521) ;
+}
